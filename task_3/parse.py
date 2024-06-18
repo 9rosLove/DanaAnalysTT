@@ -120,7 +120,7 @@ def parse_single_apartment(driver: webdriver, apartment_url: str, num: int) -> A
         location=driver.find_element(
             By.CSS_SELECTOR,
             ".css-1cju8pu.er34gjf0"
-        ).text,
+        ).text.rstrip(","),
         url=apartment_url
     )
 
