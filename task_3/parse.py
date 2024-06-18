@@ -24,7 +24,7 @@ class Apartment:
     floors: int
     area_sqm: float
     location: str
-    # url: str
+    url: str
 
 
 def get_max_pages(driver: webdriver.Firefox) -> int:
@@ -121,7 +121,7 @@ def parse_single_apartment(driver: webdriver, apartment_url: str, num: int) -> A
             By.CSS_SELECTOR,
             ".css-1cju8pu.er34gjf0"
         ).text,
-        # url=apartment_url
+        url=apartment_url
     )
 
 

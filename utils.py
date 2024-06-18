@@ -41,7 +41,10 @@ def create_worksheet(
     return spreadsheet.add_worksheet(title=title, rows=rows, cols=cols)
 
 
-def add_worksheet_and_write_data(spreadsheet, df, sheet_name) -> None:
+def add_worksheet_and_write_data(
+        spreadsheet: gspread.Spreadsheet,
+        df: pd.DataFrame,
+        sheet_name: str) -> None:
     worksheet = spreadsheet.add_worksheet(
         title=sheet_name,
         rows=df.shape[0] + 1,
